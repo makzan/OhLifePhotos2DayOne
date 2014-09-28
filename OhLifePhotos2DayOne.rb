@@ -14,7 +14,7 @@ files = arg.split ','
 puts "Importing #{files.size} photos to DayOne."
 
 files.each do |filename|
-  d = filename[4..13] + " 00:00"
+  d = filename[4..13] + " 13:00"
   puts "Importing #{filename}"
   cmd = "echo \"\" | dayone --date='#{d}' --photo-file=#{filename} new"  
   system cmd  
